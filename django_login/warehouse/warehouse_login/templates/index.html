@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div style="width: 1200px; margin: 0px auto;">
+<h1 style="text-align: center;">Warehouse Access</h1>
+<table border="1" style="margin: 0px auto; padding: 15px 0px;">
+{% for x in warehouse_users %}
+<tr>
+<td style="padding: 3px;">{{ x.id }}</td>
+<td style="padding: 3px;">{{ x.firstname }}</td>
+<td style="padding: 3px;">{{ x.lastname }}</td>
+<td style="padding: 3px;">{{ x.password }}</td>
+<td style="padding: 3px;"> <a href="update/{{ x.id }}">update</a></td>
+<td style="padding: 3px;"> <a href="delete/{{ x.id }}">delete</a> </td>
+</tr>
+{% endfor %}
+</table>
+<p style="text-align: center;"><a href="add/">add_user</a></p>
+
+</div>
+
+
+
+</body>
+</html>
